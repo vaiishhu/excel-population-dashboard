@@ -59,24 +59,3 @@ This project is a great starting point for anyone interested in data visualizati
 
 
 
-Code:
-import matplotlib.pyplot as plt
-import numpy as np
-age_groups = ['0-14', '15-24', '25-54', '55-64', '65+']
-total_population = [241.67, 483.33, 725.00, 966.67, 1208.33]
-median_age = [20, 3, 0, 0, 0]
-x = np.arange(len(age_groups))
-width = 0.35
-fig, ax = plt.subplots(figsize=(10, 6))
-rects1 = ax.bar(x - width/2, total_population, width, label='Total Population (in Millions)', color='blue')
-rects2 = ax.bar(x + width/2, median_age, width, label='Median Age', color='red')
-ax.set_xlabel('Age Group')
-ax.set_ylabel('Value')
-ax.set_title('excel-population-dashboard', color='red', fontsize=18)
-ax.set_xticks(x)
-ax.set_xticklabels(age_groups)
-ax.legend()
-ax.bar_label(rects1, padding=3)
-ax.bar_label(rects2, padding=3)
-plt.tight_layout()
-plt.show()
